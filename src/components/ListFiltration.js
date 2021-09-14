@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export function ListFiltration({showMatches}) {
     return(
@@ -45,3 +46,7 @@ export function ListFiltration({showMatches}) {
         </div>
     );
 }
+
+ListFiltration.propTypes = {
+    showMatches: PropTypes.func
+};

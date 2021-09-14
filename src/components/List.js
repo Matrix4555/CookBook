@@ -22,14 +22,14 @@ export function List() {
             const rowAtext = rowA.cells[index].textContent;
             const rowBtext = rowB.cells[index].textContent;
             switch(index) {
-                case 1:     // by title
-                    return rowAtext.toLowerCase() > rowBtext.toLowerCase() ? 1 : -1;
-                case 2:     // by ingredients
-                    return rowAtext.length > rowBtext.length ? 1 : -1;
-                case 3:     // by difficulty
-                    return rowAtext > rowBtext ? 1 : -1;
-                default:    // by number and likes
-                    return +(rowAtext) > +(rowBtext) ? 1 : -1;
+            case 1:     // by title
+                return rowAtext.toLowerCase() > rowBtext.toLowerCase() ? 1 : -1;
+            case 2:     // by ingredients
+                return rowAtext.length > rowBtext.length ? 1 : -1;
+            case 3:     // by difficulty
+                return rowAtext > rowBtext ? 1 : -1;
+            default:    // by number and likes
+                return +(rowAtext) > +(rowBtext) ? 1 : -1;
             }
         };
 
@@ -70,12 +70,12 @@ export function List() {
 
     function setDifficulty(value) {
         switch(value) {
-            case 1:
-                return 'легко';
-            case 2:
-                return 'средне';
-            case 3:
-                return 'трудно';
+        case 1:
+            return 'легко';
+        case 2:
+            return 'средне';
+        case 3:
+            return 'трудно';
         }
     }
 

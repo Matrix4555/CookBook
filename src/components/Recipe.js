@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateLikes } from '../redux/actions';
+import PropTypes from 'prop-types';
 
 import unlikedSign from '../img/like.png';
 import likedSign from '../img/liked.png';
@@ -111,3 +112,7 @@ export function Recipe(props) {
         </section>
     );
 }
+
+Recipe.propTypes = {
+    history: PropTypes.object
+};

@@ -48,6 +48,12 @@ Then write the following.
 npm start
 ```
 
+## Accounts
+
+- spiderman@gmail.com | redblue8
+- jscoder@gmail.com | ecma62015
+- gamer911@mail.ru | play2042
+
 ## Technologies
 
 - JavaScript
