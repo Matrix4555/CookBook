@@ -1,4 +1,4 @@
-import { GET_DATA, LOG_IN, ADD_RECIPE, UPDATE_LIKES } from './types';
+import { GET_DATA, LOG_IN, ADD_RECIPE, UPDATE_RECIPE_LIKES, UPDATE_USER_LIKES } from './types';
 
 const initialState = {
     recipes: [],
@@ -13,13 +13,15 @@ export const recipesReducer = (state = initialState, action) => {
         return { ...state, logged: action.payload };
     case ADD_RECIPE:
         return { ...state, recipes: state.recipes.concat(action.payload) };
-    case UPDATE_LIKES:
-        const [ newUserLikes, idOfRecipe, add ] = action.payload;
+    case UPDATE_RECIPE_LIKES:
         return {
-            recipes: state.recipes.map(el =>
-                el.id === idOfRecipe ? { ...el, likes: el.likes + add } : el
-            ),
-            logged: { ...state.logged, liked: newUserLikes }
+            ...state,
+            recipes: state.recipes.map(recipe => recipe.id === action.payload.id ? action.payload : recipe),
+        };
+    case UPDATE_USER_LIKES:
+        return {
+            ...state,
+            logged: { ...state.logged, liked: action.payload }
         };
     default:
         return state;

@@ -1,0 +1,45 @@
+.list {
+    .table {
+        .heading {
+            th {
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    background: blue;
+                }
+            }
+            .number {
+                width: 5%;
+            }
+            .title {
+                width: 25%;
+            }
+            .ingredients {
+                width: 50%;
+            }
+            .difficulty, .likes {
+                width: 10%;
+            }
+        }
+        .item {
+            cursor: pointer;
+            transition: .3s;
+            .title {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .ingredients {
+                .heading_li {
+                    list-style-type: none;
+                    span {
+                        font-style: italic;
+                        font-weight: 600;
+                    }
+                }
+            }
+            &:hover {
+                background: rgba(255, 0, 0, .1);
+            }
+        }
+    }
+}
