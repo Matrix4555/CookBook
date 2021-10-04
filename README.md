@@ -58,7 +58,7 @@ npm start
 
 - JavaScript
 - HTML
-- CSS
+- Sass
 - Node.js
 - React
 - Redux
